@@ -1,0 +1,209 @@
+#include /etc/sway/config.d/*
+###############################################
+################## AUTOSTART ##################
+###############################################
+
+#Notification daemon
+exec mako
+exec dbus-sway-environment
+exec configure-gtk
+
+######################################################
+################## GLOBAL VARIABLES ##################
+######################################################
+
+## Mod key
+set $mod Mod4
+## terminal
+set $term kitty
+## Home row direction keys
+set $left j
+set $down k
+set $up l
+set $right odiaeresis
+#Set floating modifier
+floating_modifier $mod normal
+#Launcher
+set $menu "rofi -show drun"
+
+###########################################
+################## STYLE  #################
+###########################################
+
+#Font
+font Jetbrains:monospace 14px
+#Border
+default_border pixel 2
+titlebar_border_thickness 2
+#Gaps
+gaps outer 10
+gaps inner 10
+## Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
+client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
+client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
+client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
+
+######################################################
+################## GENERAL SETTINGS  #################
+######################################################
+
+#Bar
+bar {
+    swaybar_command waybar
+ }
+
+#Keyboard
+input type:keyboard {
+    xkb_layout se
+    xkb_options caps:ctrl_modifier
+}
+
+#Specific window behaviour
+for_window [instance="origin.exe"] floating enable
+for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 800 px height 800 px
+
+# Behavior
+# Follow mouse
+focus_follows_mouse yes
+#Switching back and forth
+bindsym $mod+Tab workspace back_and_forth
+#Splitting vertical
+bindsym $mod+v splitv ; exec notify-send "Splitting vertical"
+#Splitting horizontal
+bindsym $mod+h splith ; exec notify-send "Splitting horizontal"
+# Switch the current container between different layout styles
+# Switch to tabbed
+bindsym $mod+w layout tabbed ; exec notify-send "Layout tabbed"
+#Switch between splits
+bindsym $mod+t layout toggle split ; exec notify-send "Layout split"
+
+#############################################
+################## OUTPUTS  #################
+#############################################
+
+#Background
+output * bg /home/sebastian/Github/Personal/dotfiles/wallpaper/abstract.png fill
+#Main display
+output DP-1 mode 3440x1440@100Hz pos 1080 180
+output DP-1 adaptive_sync on
+#Couch TV
+#output HDMI-A-1 mode 1920x1080@60Hz pos 1920 1440
+#output HDMI-A-1 disable
+#Secondary display
+#output DP-2 mode 1080x1920@60Hz pos 0 0 transform 90
+
+#Workspaces
+#workspace 1 output DP-1
+#workspace 2 output DP-2
+#workspace 3 output DP-1
+#workspace 4 output DP-1
+#workspace 5 output DP-1
+#workspace 6 output DP-1
+#workspace 7 output DP-1
+#workspace 8 output DP-1
+#workspace 9 output DP-1
+#workspace 10 output HDMI-A-1
+
+######################################################
+################## SWAY KEYBINDINGS ##################
+######################################################
+
+#Launch terminal
+bindsym $mod+Return exec $term
+#Launch launcher
+bindsym $mod+space exec $menu
+# Kill focused window
+bindsym $mod+Shift+q kill
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen ; exec notify-send "Fullscreen"
+# Toggle floating
+bindsym $mod+Shift+Space floating toggle
+#Toggle focus between floating and non floating
+bindsym $mod+Shift+t focus mode_toggle
+# Move focus to the parent container
+bindsym $mod+a focus parent
+# Move focus to the child container
+bindsym $mod+Shift+a focus child
+
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+
+# Resizing containers
+bindsym $mod+alt+$left resize shrink width 20px
+bindsym $mod+alt+$up resize grow height 20px
+bindsym $mod+alt+$down resize shrink height 20px
+bindsym $mod+alt+$right resize grow width 20px
+
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# Cycles through windows in the scratchpad
+bindsym $mod+minus scratchpad show
+
+# Switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+###########################################################
+################## PERSONAL KEYBINDINGS  ##################
+###########################################################
+#Launch bluetooth menu
+bindsym $mod+b exec ~/Github/Personal/dotfiles/scripts/rofi-bluetooth
+#Launch emacs client window
+bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs'
+# Screenshot with grim and swappy
+bindsym $mod+Shift+s+x exec grim - | swappy -f -
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t custom -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'
+
+#Switch between couch and desk
+#bindsym $mod+Shift+g exec $term -e ~/Github/Personal/dotfiles/scripts/start_gaming.sh stop
+#bindsym $mod+g exec $term -e ~/Github/Personal/dotfiles/scripts/start_gaming.sh start ; exec ~/Github/Personal/dotfiles/scripts/fullscreen.sh
+#bindsym $mod+Shift+f exec ~/Github/Personal/dotfiles/scripts/start_gaming.sh couch
+
+# Application launchers
+bindsym $mod+F1 exec google-chrome-stable
+bindsym $mod+F2 exec webcord
+bindsym $mod+F3 exec pavucontrol
+bindsym $mod+F4 workspace 9 ; exec spotify
+
+## Special keys, multimedia keys.
+bindsym XF86AudioMute exec ~/Github/Personal/dotfiles/scripts/volume mute
+bindsym XF86AudioLowerVolume exec ~/Github/Personal/dotfiles/scripts/volume down
+bindsym XF86AudioRaiseVolume exec ~/Github/Personal/dotfiles/scripts/volume up
+bindsym --locked XF86AudioPlay exec mpc toggle
+bindsym --locked XF86AudioNext exec mpc next
+bindsym --locked XF86AudioPrev exec mpc prev
