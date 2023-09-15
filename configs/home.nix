@@ -7,7 +7,9 @@
         ./git/home.nix
         ./vim/home.nix
         ./rofi/home.nix
-#        ./waybar/home.nix
+        ./waybar/home.nix
         ./kitty/home.nix
+        ./mako/home.nix
+        ./gtk/home.nix
     ];
 }

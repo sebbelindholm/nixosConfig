@@ -12,10 +12,9 @@
             discord
             yakuake
             spotify
-            dconf
             prismlauncher
             lm_sensors
-            fanctl
+            webcord
         ];
     };    
 }

@@ -13,7 +13,7 @@ let
       systemctl --user start pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
     '';
   };
-
+/*
   configure-gtk = pkgs.writeTextFile {
     name = "configure-gtk";
     destination = "/bin/configure-gtk";
@@ -24,20 +24,21 @@ let
     in ''
       export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
       gnome_schema=org.gnome.desktop.interface
-      gsettings set $gnome_schema gtk-theme 'Dracula'
+      gsettings set $gnome_schema gtk-theme 'tokyo-night-gtk'
     '';
   };
-
+*/
 
 in
 {
   environment.systemPackages = with pkgs; [
     dbus-sway-environment
-    configure-gtk
+    #configure-gtk
     wayland
     xdg-utils # for opening default programs when clicking links
     glib # gsettings
     dracula-theme
+    tokyo-night-gtk
     gnome3.adwaita-icon-theme  # default gnome cursors
     grim # screenshot functionality
     slurp # screenshot functionality
@@ -45,6 +46,8 @@ in
     rofi-wayland
     mako # notification system developed by swaywm maintainer
     waybar
+    swaybg
+    swappy
   ];
 
   services.dbus.enable = true;

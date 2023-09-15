@@ -5,8 +5,7 @@
 
 #Notification daemon
 exec mako
-exec dbus-sway-environment
-exec configure-gtk
+exec ~/.setup/Scripts/import_gsettings.sh
 
 ######################################################
 ################## GLOBAL VARIABLES ##################
@@ -31,7 +30,7 @@ set $menu "rofi -show drun"
 ###########################################
 
 #Font
-font Jetbrains:monospace 14px
+font Maple:monospace 14px
 #Border
 default_border pixel 2
 titlebar_border_thickness 2
@@ -40,10 +39,10 @@ gaps outer 10
 gaps inner 10
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
-client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
-client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
+client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
+client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
 ######################################################
 ################## GENERAL SETTINGS  #################
@@ -84,10 +83,10 @@ bindsym $mod+t layout toggle split ; exec notify-send "Layout split"
 #############################################
 
 #Background
-output * bg /home/sebastian/Github/Personal/dotfiles/wallpaper/abstract.png fill
+output * bg /home/sebastian/.setup/background/tokyoSkyline.jpg fill
 #Main display
-output DP-1 mode 3440x1440@100Hz pos 1080 180
-output DP-1 adaptive_sync on
+output DP-3 mode 3440x1440@100Hz
+#output DP-1 adaptive_sync on
 #Couch TV
 #output HDMI-A-1 mode 1920x1080@60Hz pos 1920 1440
 #output HDMI-A-1 disable
@@ -180,9 +179,10 @@ bindsym $mod+Shift+0 move container to workspace number 10
 ################## PERSONAL KEYBINDINGS  ##################
 ###########################################################
 #Launch bluetooth menu
-bindsym $mod+b exec ~/Github/Personal/dotfiles/scripts/rofi-bluetooth
+bindsym $mod+b exec ~/.setup/Scripts/rofi-bluetooth
 #Launch emacs client window
-bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs'
+#bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs'
+bindsym $mod+Shift+Return exec code
 # Screenshot with grim and swappy
 bindsym $mod+Shift+s+x exec grim - | swappy -f -
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
@@ -195,15 +195,18 @@ bindsym $mod+Shift+e exec swaynag -t custom -m 'Do you really want to exit sway?
 #bindsym $mod+Shift+f exec ~/Github/Personal/dotfiles/scripts/start_gaming.sh couch
 
 # Application launchers
-bindsym $mod+F1 exec google-chrome-stable
-bindsym $mod+F2 exec webcord
+bindsym $mod+F1 exec firefox
+bindsym $mod+F2 exec Discord
 bindsym $mod+F3 exec pavucontrol
 bindsym $mod+F4 workspace 9 ; exec spotify
 
 ## Special keys, multimedia keys.
-bindsym XF86AudioMute exec ~/Github/Personal/dotfiles/scripts/volume mute
-bindsym XF86AudioLowerVolume exec ~/Github/Personal/dotfiles/scripts/volume down
-bindsym XF86AudioRaiseVolume exec ~/Github/Personal/dotfiles/scripts/volume up
+bindsym XF86AudioMute exec ~/.setup/Scripts/volume mute
+bindsym XF86AudioLowerVolume exec ~/.setup/Scripts/volume down
+bindsym XF86AudioRaiseVolume exec ~/.setup/Scripts/volume up
 bindsym --locked XF86AudioPlay exec mpc toggle
 bindsym --locked XF86AudioNext exec mpc next
 bindsym --locked XF86AudioPrev exec mpc prev
+
+exec dbus-sway-environment
+#exec configure-gtk

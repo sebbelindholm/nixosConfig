@@ -5,5 +5,6 @@
     ./steam
     ./emacs
     ./sway
+    #./gtk
   ];
 }

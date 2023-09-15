@@ -18,6 +18,9 @@
         glibc
         valgrind
         gcc
+        killall
+        libnotify
+        gnome.nautilus
         #geogebra
     ];    
 }
