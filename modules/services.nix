@@ -6,6 +6,8 @@
     programs.zsh.enable = true;
     programs.dconf.enable = true;
 
+/*
     virtualisation.libvirtd.enable = true;
     environment.systemPackages = with pkgs; [ virt-manager ];
+    */
 }

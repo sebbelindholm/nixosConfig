@@ -9,7 +9,7 @@
     ];
 
   boot = {
-    kernelParams = [ "intel_iommu=on" "iommu=pt" ];
+    #kernelParams = [ "intel_iommu=on" "iommu=pt" ];
     initrd.kernelModules = [ "amdgpu" ];
   };
 
