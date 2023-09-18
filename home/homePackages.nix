@@ -13,13 +13,9 @@
             spotify
             prismlauncher
             lm_sensors
-            webcord
             dwt1-shell-color-scripts
-            gamescope
-            xwayland
-            lutris
             plank
-            bamf
+            bamf #Needed for plank
         ];
     };    
 }
