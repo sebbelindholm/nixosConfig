@@ -3,18 +3,25 @@
 {
     gtk = {
         enable = true;
-        font.name = "Maple Mono 12";
+        font.name = "Roboto 10";
+        #font.name = "Maple Mono 12";
         theme = {
-            name = "Nordic";            
-            package = pkgs.nordic;
+            name = "WhiteSur-Dark-solid";            
+            package = pkgs.whitesur-gtk-theme;
+            #name = "Nordic";            
+            #package = pkgs.nordic;
         };
         iconTheme = {
-            package = pkgs.papirus-nord;
-            name = "Papirus-Dark";
+            package = pkgs.whitesur-icon-theme;
+            name = "WhiteSur-dark";
+            #package = pkgs.papirus-nord;
+            #name = "Papirus-Dark";
         };
         cursorTheme = {
-            package = pkgs.nordzy-cursor-theme;
-            name = "Nordzy-cursors";
+            package = pkgs.apple-cursor;
+            name = "macOS-BigSur";
+            #package = pkgs.nordzy-cursor-theme;
+            #name = "Nordzy-cursors";
         };
     };    
 }

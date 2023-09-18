@@ -9,6 +9,7 @@
     };
 
     packages = with pkgs; [
+      roboto
       jetbrains-mono
       ubuntu_font_family
       maple-mono

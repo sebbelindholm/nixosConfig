@@ -18,6 +18,8 @@
             gamescope
             xwayland
             lutris
+            plank
+            bamf
         ];
     };    
 }
