@@ -3,8 +3,8 @@
 {
   imports = [
     ./steam
-    ./emacs
-    ./sway
-    #./gtk
+    #./emacs
+    #./sway
+    #./i3   
   ];
 }

@@ -7,9 +7,10 @@
       layout = "se";
       dpi = 1;
       displayManager = {
-        sddm.enable = true;
+        lightdm.enable = true;
+        defaultSession = "budgie-desktop";
       };
-      desktopManager.plasma5.enable = false;
+      desktopManager.budgie.enable = true;
     };
   };
 }

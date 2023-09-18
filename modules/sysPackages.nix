@@ -20,7 +20,8 @@
         gcc
         killall
         libnotify
-        gnome.nautilus
+        gnome.gnome-keyring
+        curl
         #geogebra
     ];    
 }
