@@ -13,5 +13,7 @@
         ./gtk/home.nix
         #./i3/home.nix
         ./dconf/home.nix
+        ./emacs/home.nix
+        ./neovim/home.nix
     ];
 }

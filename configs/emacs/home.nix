@@ -1,9 +1,10 @@
 { pkgs, ... }:
 
 {
-    services = {
+    programs = {
         emacs = {
             enable = false;
+            package = pkgs.emacs;
         };
-    };    
+    };
 }

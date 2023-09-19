@@ -24,6 +24,8 @@
         curl
         gnome.gnome-system-monitor
         nvtop-amd
+        eza
+        ripgrep
         #geogebra
     ];    
 }
