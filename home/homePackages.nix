@@ -16,6 +16,7 @@
             dwt1-shell-color-scripts
             plank
             bamf #Needed for plank
+            comma
         ];
     };    
 }
