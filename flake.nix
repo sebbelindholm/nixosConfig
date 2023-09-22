@@ -15,7 +15,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs: 
   let
     user = "sebastian";
-    location = "/$HOME/.nixos";
+    location = "/$HOME/.setup";
   in
   {
     nixosConfigurations = (
