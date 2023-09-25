@@ -6,5 +6,6 @@
     ./emacs
     #./sway
     #./i3   
+    #./vmware
   ];
 }
