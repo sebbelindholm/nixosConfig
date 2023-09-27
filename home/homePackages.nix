@@ -6,11 +6,11 @@
             neofetch
             #google-chrome
             firefox
-            vscode
+            #vscode
             kitty
             pavucontrol
             #discord
-            spotify
+            #spotify
             prismlauncher
             lm_sensors
             dwt1-shell-color-scripts
