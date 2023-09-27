@@ -5,7 +5,7 @@
     
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";   
 
-    inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     home-manager = {                                                     
       url = "github:nix-community/home-manager";
@@ -23,7 +23,7 @@
     nixosConfigurations = (
      import ./host {
         inherit (nixpkgs) lib;
-        inherit inputs nixpkgs user location home-manager nixos-hardware;
+        inherit inputs nixpkgs user location home-manager;
       }
     );
   };

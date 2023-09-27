@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, user, location, ... }:
+{ lib, inputs, nixpkgs, home-manager, user, location, nixos-hardware, ... }:
 
 let
   system = "x86_64-linux" ;                               
