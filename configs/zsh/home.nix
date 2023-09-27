@@ -11,6 +11,7 @@
             shellAliases = {
                 ls="eza --icons --grid --classify --colour=auto --sort=type --group-directories-first --header --modified --created --git --binary --group";
                 build-desktop="sudo nixos-rebuild switch --flake ~/.setup#desktop";
+                cleanup="nix-collect-garbage -d && sudo nix-collect-garbage -d";
             };
             
             oh-my-zsh =  {
