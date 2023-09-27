@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfreePredicate = (pkg: true);  
+  #nixpkgs.config.allowUnfreePredicate = (pkg: true);  
   imports = [                              
     ../../home/home.nix
   ];
