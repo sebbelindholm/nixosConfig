@@ -4,12 +4,12 @@
     home = {
         packages = with pkgs; [
             neofetch
-            google-chrome
+            #google-chrome
             firefox
             vscode
             kitty
             pavucontrol
-            discord
+            #discord
             spotify
             prismlauncher
             lm_sensors
