@@ -3,7 +3,8 @@
 {
     home = {
         packages = with pkgs; [
-            neofetch
+	    geany
+	    neofetch
             google-chrome
             firefox
             vscode
