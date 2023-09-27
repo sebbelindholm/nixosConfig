@@ -2,7 +2,7 @@
 
 {
   imports = [
-    #./steam
+    ./steam
     ./emacs
     #./sway
     #./i3   
