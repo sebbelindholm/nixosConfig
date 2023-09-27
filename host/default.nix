@@ -6,8 +6,7 @@ let
 
   pkgs = import nixpkgs {
     inherit system;
-    config.allowUnfree = true;    
-    config.allowUnfreePredicate = (pkg: true);                        
+    config.allowUnfree = true;                          
   };
 
 in
