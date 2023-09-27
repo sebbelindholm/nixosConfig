@@ -19,6 +19,7 @@
             bamf #Needed for plank
             comma
             gnome.gnome-tweaks
+            gnome.gnome-terminal
         ];
     };    
 }
