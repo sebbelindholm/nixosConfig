@@ -11,12 +11,13 @@
       '';
       dpi = 1;
       displayManager = {
-        lightdm.enable = true;
-        defaultSession = "budgie-desktop";
+        gdm.enable = true;
+        #lightdm.enable = true;
+        #defaultSession = "budgie-desktop";
       };
       desktopManager = {
-        budgie.enable = true;
-        #gnome.enable = true;
+        #budgie.enable = true;
+        gnome.enable = true;
       };
     };
   };

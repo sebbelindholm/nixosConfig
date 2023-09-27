@@ -15,5 +15,6 @@
         ./dconf/home.nix
         ./emacs/home.nix
         ./neovim/home.nix
+        ./gnome/home.nix
     ];
 }
