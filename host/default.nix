@@ -40,4 +40,36 @@ in
       }
     ];
   };
+
+    thinkpad = lib.nixosSystem {
+    inherit system;
+    specialArgs = {
+      inherit inputs user location;
+      host = {
+        hostName = "thinkpad";
+      };
+    };
+    modules = [
+      ./thinkpad
+
+      nixos-hardware.nixosModules.lenovo-thinkpad-l13
+
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = {
+          inherit user;
+          host = {
+            hostName = "thinkpad";
+          };
+        };
+        home-manager.users.${user} = {
+          home.stateVersion = "22.05";
+          imports = [ 
+            (import ./thinkpad/home.nix) 
+            ];
+        };
+      }
+    ];
+  };
 }
