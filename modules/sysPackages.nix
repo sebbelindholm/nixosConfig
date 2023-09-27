@@ -28,6 +28,8 @@
         nvtop-amd
         eza
         gnugrep
+        gtk-engine-murrine
+        gnome.gnome-themes-extra
         #geogebra
     ];    
 }
