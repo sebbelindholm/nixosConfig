@@ -23,7 +23,7 @@
     nixosConfigurations = (
      import ./host {
         inherit (nixpkgs) lib;
-        inherit inputs nixpkgs user location home-manager;
+        inherit inputs nixpkgs user location home-manager nixos-hardware;
       }
     );
   };
