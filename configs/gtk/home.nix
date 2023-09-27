@@ -3,18 +3,18 @@
 {
     gtk = {
         enable = true;
-        font.name = "Roboto 10";
+        font.name = "Roboto 12";
         theme = {
-            name = "WhiteSur-Dark-solid";            
-            package = pkgs.whitesur-gtk-theme;
+            name = "Adwaita";            
+            #package = pkgs.dracula-theme;
         };
         iconTheme = {
-            package = pkgs.whitesur-icon-theme;
-            name = "WhiteSur-dark";
+            package = pkgs.papirus-nord;
+            name = "Papirus";
         };
         cursorTheme = {
-            package = pkgs.apple-cursor;
-            name = "macOS-BigSur";
+            #package = pkgs.nordzy-cursor-theme;
+            name = "Adwaita";
         };
     };    
 }
