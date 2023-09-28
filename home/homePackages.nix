@@ -3,8 +3,8 @@
 {
     home = {
         packages = with pkgs; [
-	    geany
-	    neofetch
+	        geany
+	        neofetch
             google-chrome
             firefox
             vscode
@@ -19,7 +19,7 @@
             bamf #Needed for plank
             comma
             gnome.gnome-tweaks
-            gnome.gnome-terminal
+            webcord
         ];
     };    
 }
