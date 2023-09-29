@@ -11,6 +11,7 @@
     gnomeExtensions.user-themes
     gnomeExtensions.dash-to-panel
     gnomeExtensions.unblank
+    gnomeExtensions.aylurs-widgets
   ];
     dconf.settings = {
 

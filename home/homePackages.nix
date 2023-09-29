@@ -20,6 +20,8 @@
             comma
             gnome.gnome-tweaks
             webcord
+            oversteer
+            linuxConsoleTools
         ];
     };    
 }

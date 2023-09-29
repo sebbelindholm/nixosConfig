@@ -6,17 +6,17 @@
         
         #font.name = "Roboto 12";
         theme = {
-            name = "Fluent";            
-            package = pkgs.fluent-gtk-theme;
+            name = "Orchis-Dark";            
+            package = pkgs.orchis-theme;
         };
-        #iconTheme = {
-        #    package = pkgs.papirus-nord;
-        #    name = "Papirus";
-        #};
-        #cursorTheme = {
-            #package = pkgs.nordzy-cursor-theme;
-        #    name = "Adwaita";
-        #};
+        iconTheme = {
+            package = pkgs.papirus-icon-theme;
+            name = "Papirus";
+        };
+        cursorTheme = {
+            package = pkgs.bibata-cursors;
+            name = "Bibata-Modern-Ice";
+        };
         
     };    
 }
