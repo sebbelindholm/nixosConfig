@@ -17,5 +17,6 @@
         ./neovim/home.nix
         ./gnome/home.nix
         ./dconf/home.nix
+        ./obs/home.nix
     ];
 }
