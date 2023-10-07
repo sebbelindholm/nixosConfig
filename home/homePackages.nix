@@ -22,6 +22,7 @@
             webcord
             oversteer
             linuxConsoleTools
+            minecraft
         ];
     };    
 }

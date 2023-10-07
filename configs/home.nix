@@ -18,5 +18,6 @@
         ./gnome/home.nix
         ./dconf/home.nix
         ./obs/home.nix
+        ./hypr/home.nix
     ];
 }
