@@ -7,19 +7,15 @@
       ../../modules
       ../../configs
     ];
-/**
-  boot = {
-    #kernelParams = [ "intel_iommu=on" "iommu=pt" ];
-    #initrd.kernelModules = [ "amdgpu" ];
-  };
 
-  services = {
-    xserver = {
-      videoDrivers = [ "amdgpu" ];
+  services.fprintd = {
+    enable = true;
+
+    tod = {
+      enable = true;
+      driver = pkgs.libfprint-2-tod1-goodix-550a;
     };
   };
 
-  #nixpkgs.config.allowUnfree = true;
-**/
   system.stateVersion = "22.05";
 }
