@@ -31,6 +31,7 @@
         gtk-engine-murrine
         gnome.gnome-themes-extra
         zulu
+        dconf2nix
         #geogebra
     ];    
 }

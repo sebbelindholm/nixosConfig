@@ -5,6 +5,15 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "org/gnome/Console" = {
+      last-window-size = mkTuple [ 812 577 ];
+    };
+
+    "org/gnome/Totem" = {
+      active-plugins = [ "autoload-subtitles" "variable-rate" "movie-properties" "apple-trailers" "recent" "vimeo" "screensaver" "save-file" "skipto" "rotation" "screenshot" "open-directory" "mpris" ];
+      subtitle-encoding = "UTF-8";
+    };
+
     "org/gnome/control-center" = {
       last-panel = "keyboard";
       window-state = mkTuple [ 980 640 ];
@@ -72,6 +81,10 @@ with lib.hm.gvariant;
       application-id = "gnome-power-panel.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/minecraft-launcher" = {
+      application-id = "minecraft-launcher.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-baobab" = {
       application-id = "org.gnome.baobab.desktop";
     };
@@ -82,6 +95,14 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/org-gnome-nautilus" = {
       application-id = "org.gnome.Nautilus.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-settings" = {
+      application-id = "org.gnome.Settings.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-prismlauncher-prismlauncher" = {
+      application-id = "org.prismlauncher.PrismLauncher.desktop";
     };
 
     "org/gnome/desktop/notifications/application/spotify" = {
@@ -133,6 +154,20 @@ with lib.hm.gvariant;
       migrated = true;
     };
 
+    "org/gnome/file-roller/listing" = {
+      list-mode = "as-folder";
+      name-column-width = 250;
+      show-path = false;
+      sort-method = "name";
+      sort-type = "ascending";
+    };
+
+    "org/gnome/file-roller/ui" = {
+      sidebar-width = 200;
+      window-height = 480;
+      window-width = 600;
+    };
+
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
       edge-tiling = true;
@@ -143,6 +178,7 @@ with lib.hm.gvariant;
       default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
+      search-view = "list-view";
     };
 
     "org/gnome/nautilus/window-state" = {
@@ -154,6 +190,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
+      app-picker-layout = "[{'org.gnome.Geary.desktop': <{'position': <0>}>, 'org.gnome.Contacts.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.gnome.Calendar.desktop': <{'position': <5>}>, 'org.gnome.Photos.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>, 'ca.desrt.dconf-editor.desktop': <{'position': <9>}>, 'simple-scan.desktop': <{'position': <10>}>, 'discord.desktop': <{'position': <11>}>, 'gnome-system-monitor.desktop': <{'position': <12>}>, 'org.gnome.Extensions.desktop': <{'position': <13>}>, 'F1 2021.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'geany.desktop': <{'position': <16>}>, 'yelp.desktop': <{'position': <17>}>, 'google-chrome.desktop': <{'position': <18>}>, 'org.gnome.Cheese.desktop': <{'position': <19>}>, 'htop.desktop': <{'position': <20>}>, 'kitty.desktop': <{'position': <21>}>, 'org.gnome.Music.desktop': <{'position': <22>}>}, {'nvim.desktop': <{'position': <0>}>, 'nixos-manual.desktop': <{'position': <1>}>, 'nvtop.desktop': <{'position': <2>}>, 'org.berarma.Oversteer.desktop': <{'position': <3>}>, 'plank.desktop': <{'position': <4>}>, 'org.prismlauncher.PrismLauncher.desktop': <{'position': <5>}>, 'Proton Experimental.desktop': <{'position': <6>}>, 'pavucontrol.desktop': <{'position': <7>}>, 'spotify.desktop': <{'position': <8>}>, 'org.gnome.TextEditor.desktop': <{'position': <9>}>, 'org.gnome.Tour.desktop': <{'position': <10>}>, 'org.gnome.Epiphany.desktop': <{'position': <11>}>, 'xterm.desktop': <{'position': <12>}>}]";
       disabled-extensions = [ "native-window-placement@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" "unblank@sun.wxg@gmail.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "dash-to-dock@micxgx.gmail.com" "blur-my-shell@aunetx" "widgets@aylur" "impatience@gfxmonk.net" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "code.desktop" "firefox.desktop" "webcord.desktop" "steam.desktop" "org.gnome.Console.desktop" "org.gnome.Settings.desktop" ];
@@ -171,6 +208,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/blur-my-shell/panel" = {
+      blur = false;
       static-blur = false;
     };
 
