@@ -5,8 +5,23 @@
     grim
     slurp
     swaybg
-    rofi-wayland
+    wofi
+    swaylock-effects
     waybar
+    dunst
+    wlogout
+    #qt5-wayland 
+    #qt6-wayland
+    polkit-kde-agent
+  ];
+
+  imports = [
+    ../wofi/home.nix
+    ../dunst/home.nix
+    ../waybar/home.nix
+    ../wlogout/home.nix
+    ../swaylock/home.nix
+    ../rofi/home.nix
   ];
 
   home.sessionVariables = {
