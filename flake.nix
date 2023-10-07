@@ -7,6 +7,11 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    hyprland = {
+      url = "github:vaxerski/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {                                                     
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,7 +19,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, hyprland, ... }@inputs: 
   let
     user = "sebastian";
     location = "/$HOME/.setup";
@@ -23,7 +28,7 @@
     nixosConfigurations = (
      import ./host {
         inherit (nixpkgs) lib;
-        inherit inputs nixpkgs user location home-manager nixos-hardware;
+        inherit inputs nixpkgs user location home-manager nixos-hardware hyprland;
       }
     );
   };

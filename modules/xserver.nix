@@ -11,7 +11,7 @@
       '';
       dpi = 1;
       displayManager = {
-        gdm.enable = true;
+        sddm.enable = true;
         #lightdm.enable = true;
         #defaultSession = "budgie-desktop";
       };

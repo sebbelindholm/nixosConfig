@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, user, location, nixos-hardware, ... }:
+{ lib, inputs, nixpkgs, home-manager, user, location, nixos-hardware, hyprland, ... }:
 
 let
   system = "x86_64-linux" ;                               
@@ -14,7 +14,7 @@ in
   desktop = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs user location;
+      inherit inputs user location hyprland;
       host = {
         hostName = "desktop";
       };
@@ -44,7 +44,7 @@ in
   thinkpad = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs user location;
+      inherit inputs user location hyprland;
       host = {
         hostName = "thinkpad";
       };

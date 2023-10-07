@@ -4,7 +4,8 @@
 	#nixpkgs.config.allowUnfree = true;
 	
     environment.systemPackages = with pkgs; [
-        dconf2nix
+	lite-xl
+	dconf2nix
         wget
         unzip
         zip
