@@ -14,6 +14,7 @@
                 build-thinkpad="sudo nixos-rebuild switch --flake ~/.setup#thinkpad";
                 build-desktop="sudo nixos-rebuild switch --flake ~/.setup#desktop";
                 cleanup="nix-collect-garbage -d && sudo nix-collect-garbage -d";
+                save-gnome="/home/sebastian/.setup/Scripts/saveGnome.sh";
             };
             
             oh-my-zsh =  {
