@@ -15,10 +15,10 @@
         #lightdm.enable = true;
         #defaultSession = "budgie-desktop";
       };
-      desktopManager = {
+      #desktopManager = {
         #budgie.enable = true;
-        gnome.enable = true;
-      };
+        #gnome.enable = true;
+      #};
     };
   };
 }

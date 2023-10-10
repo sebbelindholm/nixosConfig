@@ -11,6 +11,7 @@
         zip
         vim
         htop
+        btop
         killall
         man-pages
         man-pages-posix
@@ -34,6 +35,7 @@
         gnome.gnome-themes-extra
         zulu
         dconf2nix
+        gnome.nautilus
         #geogebra
     ];    
 }

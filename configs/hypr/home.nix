@@ -3,25 +3,30 @@
 {
   home.packages = with pkgs; [
     grim
+    brillo
+    swayidle
     slurp
+    swappy
     swaybg
-    wofi
-    swaylock-effects
+    rofi-wayland
+    swaylock-fancy
     waybar
     dunst
     wlogout
     #qt5-wayland 
     #qt6-wayland
     polkit-kde-agent
+    pamixer
   ];
 
   imports = [
-    ../wofi/home.nix
+    #../wofi/home.nix
     ../dunst/home.nix
     ../waybar/home.nix
     ../wlogout/home.nix
     ../swaylock/home.nix
     ../rofi/home.nix
+    ../dunst/home.nix
   ];
 
   #home.sessionVariables = {

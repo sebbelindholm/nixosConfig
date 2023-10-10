@@ -14,7 +14,8 @@
       ubuntu_font_family
       maple-mono
       maple-mono-NF
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      cascadia-code
+      (nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" ]; })
     ];
   };    
 }
