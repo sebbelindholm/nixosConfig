@@ -40,6 +40,9 @@
         gtk-engine-murrine
         playerctl
         qt6.qtwayland
+        libsForQt5.qt5.qtquickcontrols2
+        libsForQt5.qt5.qtgraphicaleffects
+        libsForQt5.qtstyleplugin-kvantum
         (python310.withPackages (p: with p; [
             pygobject3 
             requests

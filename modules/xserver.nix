@@ -12,6 +12,7 @@
       dpi = 1;
       displayManager = {
         sddm.enable = true;
+        sddm.theme = "${import ../configs/sddm/tokyo-night-sddm.nix { inherit pkgs; }}";
         #lightdm.enable = true;
         #defaultSession = "budgie-desktop";
       };
