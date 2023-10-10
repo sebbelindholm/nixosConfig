@@ -4,17 +4,14 @@
   home.packages = with pkgs; [
     grim
     brillo
-    swayidle
     slurp
     swappy
     swaybg
     rofi-wayland
-    swaylock-fancy
+    swaylock-effects
     waybar
     dunst
     wlogout
-    #qt5-wayland 
-    #qt6-wayland
     polkit-kde-agent
     pamixer
   ];

@@ -59,7 +59,7 @@ with lib.hm.gvariant;
       cursor-theme = "Bibata-Modern-Ice";
       font-antialiasing = "rgba";
       font-hinting = "full";
-      gtk-theme = "Orchis-Dark";
+      gtk-theme = "Tokyonight-Dark-BL";
       icon-theme = "Papirus";
       monospace-font-name = "JetBrainsMono Nerd Font Medium 12";
       text-scaling-factor = 1.0;
@@ -228,7 +228,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/user-theme" = {
-      name = "Orchis-Dark";
+      name = "Tokyonight-Dark-BL";
     };
 
     "org/gnome/shell/world-clocks" = {

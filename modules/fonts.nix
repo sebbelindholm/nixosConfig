@@ -15,7 +15,8 @@
       maple-mono
       maple-mono-NF
       cascadia-code
-      (nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" ]; })
+      nerdfonts
+      #(nerdfonts.override { fonts = [ "jetbrains-mono" "Iosevka" ]; })
     ];
   };    
 }

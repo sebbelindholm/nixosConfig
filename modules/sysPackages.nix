@@ -4,8 +4,7 @@
 	#nixpkgs.config.allowUnfree = true;
 	
     environment.systemPackages = with pkgs; [
-	lite-xl
-	dconf2nix
+	    dconf2nix
         wget
         unzip
         zip
@@ -36,6 +35,16 @@
         zulu
         dconf2nix
         gnome.nautilus
+        gnome.gnome-tweaks
+        gnome.gnome-themes-extra
+        gtk-engine-murrine
+        playerctl
+        qt6.qtwayland
+        (python310.withPackages (p: with p; [
+            pygobject3 
+            requests
+        ]))
+        #(python38.withPackages(ps: with ps; [ PyGObject requests ]))
         #geogebra
     ];    
 }

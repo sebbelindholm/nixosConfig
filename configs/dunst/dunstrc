@@ -1,5 +1,5 @@
 [global]
-  font = "Product Sans"
+  font = "Jetbrains Mono"
 
 	# Allow a small subset of html markup:
 	# <b>bold</b>
@@ -98,7 +98,7 @@
 	idle_threshold = 0
 
 	# Which monitor should the notifications be displayed on.
-	monitor = 0
+	#monitor = 0
 
 	# Display notification on focused monitor. Possible modes are:
 	# mouse: follow mouse pointer
@@ -110,7 +110,7 @@
 	#
 	# If this option is set to mouse or keyboard, the monitor option will be
 	# ignored.
-	follow = none
+	follow = mouse
 
 	# Display indicators for URLs (U) and actions (A).
 	show_indicators = no
