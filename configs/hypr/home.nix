@@ -14,6 +14,9 @@
     wlogout
     polkit-kde-agent
     pamixer
+    cliphist
+    wl-clip-persist
+    udiskie
   ];
 
   imports = [

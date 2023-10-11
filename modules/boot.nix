@@ -10,5 +10,10 @@
             efi.efiSysMountPoint = "/boot";
             timeout = 3;
         };
+
+        plymouth = {
+            enable = true;
+        };
+
     };
 }
