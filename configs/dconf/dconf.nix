@@ -59,7 +59,7 @@ with lib.hm.gvariant;
       cursor-theme = "Bibata-Modern-Ice";
       font-antialiasing = "rgba";
       font-hinting = "full";
-      gtk-theme = "Tokyonight-Dark-BL";
+      gtk-theme = "Arc-Dark";
       icon-theme = "Papirus";
       monospace-font-name = "JetBrainsMono Nerd Font Medium 12";
       text-scaling-factor = 1.0;
@@ -71,6 +71,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/code" = {
       application-id = "code.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/discord" = {
+      application-id = "discord.desktop";
     };
 
     "org/gnome/desktop/notifications/application/firefox" = {
@@ -228,7 +232,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/user-theme" = {
-      name = "Tokyonight-Dark-BL";
+      name = "Arc-Dark";
     };
 
     "org/gnome/shell/world-clocks" = {

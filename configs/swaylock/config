@@ -19,7 +19,7 @@ grace-no-mouse
 grace-no-touch
 
 # colors 
-color=1a1b2620
+color=21252B
 separator-color=00000000
 key-hl-color=7dcfff
 bs-hl-color=7dcfff
@@ -34,14 +34,14 @@ text-ver-color=c0caf5
 text-wrong-color=f7768e
 
 # inside
-inside-clear-color=1a1b2680
-inside-color=1a1b2680
-inside-ver-color=1a1b2680
-inside-wrong-color=1a1b2680
+inside-clear-color=282C34
+inside-color=282C34
+inside-ver-color=282C34
+inside-wrong-color=21252B
 
 # line
-line-clear-color=1a1b26
-line-color=1a1b26
+line-clear-color=21252B
+line-color=21252B
 line-ver-color=9ece6a
 line-wrong-color=f7768e
 

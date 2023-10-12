@@ -1,127 +1,93 @@
 {
-    "height": 20, // Waybar height (to be removed for auto height)
-    "layer": "top", // Waybar at top layer
-    "margin-top": 6,
-    "margin-left": 10,
-    "margin-bottom": 0,
-    "margin-right": 10,
-    "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["custom/launcher", "cpu", "memory", "hyprland/workspaces", "custom/weather"],
-    "modules-center": ["custom/spotify"],
-    "modules-right": ["tray", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
-    "hyprland/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-      "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "urgent": "",
-        "active": "",
-        "default": ""
-      }
-    },
+
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 10,
+    "output": ["DP-1"],
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "battery", "backlight", "bluetooth", "network", "pulseaudio", "clock"],
+
     "hyprland/window": {
-        "format": "{}"
-    },
-    "tray": {
-        "spacing": 10
-    },
-    "clock": {
-        "format": "<span color='#bf616a'> </span>{:%a %b %d}",
-        "format-alt": "<span color='#bf616a'> </span>{:%I:%M %p}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "min-length": 50,
+        "max-length": 50,
+        "all-outputs": true
     },
 
-    "cpu": {
-      "interval": 10,
-      "format": " {}%",
-      "max-length": 10,
-      "on-click": "",
-    },
-    "memory": {
-        "interval": 30,
-        "format": " {}%",
-        "format-alt":" {used:0.1f}G",
-        "max-length": 10,
-    },
-    "backlight": {
-        "device": "DP-1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "",
-    },
-    "network": {
-        "format-wifi": "直 {signalStrength}%",
-        "format-ethernet": "󰈀 wired",
-        "format-disconnected": "睊",
-        "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
-        "format-disconnected": "Disconnected  ",
-    },
+    "hyprland/workspaces": {
+        "active-only":false,
+        "all-outputs": false,
+        "on-click": "activate",
 
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "  {volume}%",
-        "format-bluetooth-muted": " ",
-        "format-muted": "婢",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+        "persistent_workspaces":{
+            "1": ["DP-1"],
+            "2": ["HDMI-A-1"],
+            "3": ["DP-1"],
+            "4": ["DP-1"],
+            "5": ["DP-1"],
+            "6": ["DP-1"],
+            "7": ["DP-1"],
+            "8": ["DP-1"],
+            "9": ["DP-1"],
+            "10": ["DP-1"]
         },
-        "on-click": "pavucontrol"
-    },
-
-    "bluetooth": {
-        "on-click": "~/.config/waybar/scripts/rofi-bluetooth &",
-        "format": " {status}",
+        "format": " {icon} ",
+        "format-icons": {
+          "active": "",
+          "default": "2",
+          "persistent":""
+        }       
     },
 
     "battery": {
-      "bat": "BAT0",
-      "adapter": "ADP0",
-      "interval": 60,
-      "states": {
-          "warning": 30,
-          "critical": 15
-      },
-      "max-length": 20,
-      "format": "{icon} {capacity}%",
-      "format-warning": "{icon} {capacity}%",
-      "format-critical": "{icon} {capacity}%",
-      "format-charging": "<span font-family='Font Awesome 6 Free'></span> {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{icon} {time}",
-      "format-full": "  {capacity}%",
-      "format-icons": [" ", " ", " ", " ", " "],
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
     },
-    "custom/weather": {
-      "exec": "python3 ~/.config/waybar/scripts/weather.py",
-      "restart-interval": 300,
-      "return-type": "json",
-      "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/a319796a4173829988d68c4e3a5f90c1b6832667ea7aaa201757a1c887ec667a"
-    },   
 
-   "custom/spotify": {
-    "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-    "format": "{}  ",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-double-click-right": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+    "clock": {
+        "format": "<span>󰥔 </span>{:%H:%M}",
+        "format-alt": "<span> </span>{:%a %b %d}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     },
-    "custom/power-menu": {
-        "format": " <span color='#6a92d7'>⏻ </span>",
-        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
-    }, 
-    "custom/launcher": {
-        "format": " <span color='#6a92d7'> </span>",
-        "on-click": "rofi -show drun",
+
+    "pulseaudio": {
+        "format": "{icon} {volume}",
+        "format-icons": {
+            "default": ["", "", ""],
+            "headphones": "󰋋",
+            "headset": "󰋋"
+        },
+
+        "format-muted": "󰖁",
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
     },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "on-click": "~/.setup/Scripts/rofi-bluetooth"
+    },
+    
+    "network": {
+        "format-ethernet": "󰈀 Wired",
+        "format-disconencted": "󰤯 disconencted",
+        "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
+        "format-wifi": "{icon} {signalStrength}%",
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "light -A 5",
+        "on-scroll-down": "light -U 5"
+
+    }
+
 }

@@ -17,6 +17,7 @@
     cliphist
     wl-clip-persist
     udiskie
+    hyprpicker
   ];
 
   imports = [

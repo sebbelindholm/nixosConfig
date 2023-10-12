@@ -43,6 +43,7 @@
         libsForQt5.qt5.qtquickcontrols2
         libsForQt5.qt5.qtgraphicaleffects
         libsForQt5.qtstyleplugin-kvantum
+        gobject-introspection 
         (python310.withPackages (p: with p; [
             pygobject3 
             requests

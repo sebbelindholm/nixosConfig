@@ -6,8 +6,8 @@
         
         #font.name = "Roboto 12";
         theme = {
-            name = "Tokyonight-Dark-BL";
-            package = pkgs.tokyo-night-gtk;
+            name = "Arc-Dark";
+            package = pkgs.arc-theme;
             #name = "Orchis-Dark";            
             #package = pkgs.orchis-theme ;
         };
