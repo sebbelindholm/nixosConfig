@@ -26,7 +26,6 @@
         libnotify
         gnome.gnome-keyring
         curl
-        gnome.gnome-system-monitor
         nvtop-amd
         eza
         gnugrep
