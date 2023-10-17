@@ -18,6 +18,8 @@
             oversteer
             linuxConsoleTools
             minecraft
+            easyeffects
+            audacity
         ];
     };    
 }
