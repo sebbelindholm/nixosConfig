@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, nix-doom-emacs, ... }:
 
 {
     imports = [

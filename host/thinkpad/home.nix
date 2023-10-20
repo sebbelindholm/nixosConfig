@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nix-doom-emacs, ... }:
 
 {
   #nixpkgs.config.allowUnfreePredicate = (pkg: true);  

@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, nix-doom-emacs, ... }:
 
 {
     programs = {
-        emacs = {
+        doom-emacs = {
             enable = false;
-            package = pkgs.emacs;
+            doomPrivateDir = ../doom;
         };
     };
 }

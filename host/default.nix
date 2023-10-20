@@ -35,7 +35,7 @@ in
           home.stateVersion = "22.05";
           imports = [ 
             (import ./desktop/home.nix) 
-            ];
+          ];
         };
       }
     ];
@@ -67,7 +67,7 @@ in
           home.stateVersion = "22.05";
           imports = [ 
             (import ./thinkpad/home.nix) 
-            ];
+          ];
         };
       }
     ];
