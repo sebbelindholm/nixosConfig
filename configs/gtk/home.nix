@@ -6,7 +6,9 @@
         
         #font.name = "Roboto 12";
         theme = {
-            name = "Arc-Dark";
+        	name = "Arc-Dark";
+#        	package = pkgs.graphite-gtk-theme;
+            #name = "Arc-Dark";
             package = pkgs.arc-theme;
             #name = "Orchis-Dark";            
             #package = pkgs.orchis-theme ;

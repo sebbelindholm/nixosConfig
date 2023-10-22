@@ -26,7 +26,7 @@ in
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit user;
+          inherit user inputs;
           host = {
             hostName = "desktop";
           };

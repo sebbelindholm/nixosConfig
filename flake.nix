@@ -17,6 +17,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+   ##	ags.url = "github:Aylur/ags";
+    
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, hyprland, ... }@inputs: 

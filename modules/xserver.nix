@@ -18,7 +18,7 @@
       };
       desktopManager = {
         #budgie.enable = true;
-        #gnome.enable = true;
+#        gnome.enable = true;
       };
     };
   };

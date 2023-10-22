@@ -12,11 +12,14 @@
     waybar
     dunst
     wlogout
+    wl-clipboard
+    xdg-utils
     polkit-kde-agent
     pamixer
     cliphist
     wl-clip-persist
     udiskie
+	swww
     hyprpicker
   ];
 
@@ -28,6 +31,7 @@
     ../swaylock/home.nix
     ../rofi/home.nix
     ../dunst/home.nix
+    #../ags/home.nix
   ];
 
   #home.sessionVariables = {

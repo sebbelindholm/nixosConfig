@@ -1,4 +1,4 @@
-{ inputs, nix-doom-emacs, ... }:
+{ inputs, ... }:
 
 {
     imports = [
@@ -14,5 +14,6 @@
         ./dconf/home.nix
         ./obs/home.nix
         ./hypr/home.nix
+        ./micro/home.nix
     ];
 }

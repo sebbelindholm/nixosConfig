@@ -5,6 +5,8 @@
 	
     environment.systemPackages = with pkgs; [
 	    dconf2nix
+		sassc
+        micro
         wget
         unzip
         zip
@@ -48,7 +50,8 @@
             pygobject3 
             requests
         ]))
-        #(python38.withPackages(ps: with ps; [ PyGObject requests ]))
-        #geogebra
+
+        gradience
+
     ];    
 }

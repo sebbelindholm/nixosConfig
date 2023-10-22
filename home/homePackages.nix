@@ -4,7 +4,9 @@
     home = {
         packages = with pkgs; [
 	        neofetch
+			vlc
             firefox
+			element-desktop
             vscode
             kitty
             pavucontrol
