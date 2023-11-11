@@ -5,6 +5,7 @@
 	
     environment.systemPackages = with pkgs; [
 	    dconf2nix
+        fan2go
 		sassc
         micro
         wget
