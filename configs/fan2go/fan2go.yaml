@@ -43,3 +43,9 @@ curves:
       min: 40
       max: 90
 
+statistics:
+  enabled: true
+  port: 9000
+
+api:
+  enabled: true
