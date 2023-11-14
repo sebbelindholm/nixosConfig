@@ -7,6 +7,6 @@ case $HOSTNAME in
     ;;
 
   nixos-thinkpad) 
-    hyprctl keyword monitor eDP-1, 1280x720@60, 0x0, 1.0
+    hyprctl keyword monitor eDP-1, 1920x1080@60, 0x0, 1.0
     ;;
 esac
