@@ -35,7 +35,7 @@ tooltip label {
 }
 
 #workspaces {
-    margin-left: 15;
+    margin-left: 15px;
 }
 
 #workspaces button {
@@ -50,7 +50,7 @@ tooltip label {
 
 #clock {
     color: #ECD3A0;
-    margin-right: 15;
+    margin-right: 15px;
 }
 
 #battery {
