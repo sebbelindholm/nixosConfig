@@ -19,6 +19,8 @@
     };
   };
 
+  networking.hostName = "nixos-desktop";
+
   nixpkgs.config.allowUnfree = true;
 
   systemd.services.fan2go = {
