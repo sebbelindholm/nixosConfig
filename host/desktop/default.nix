@@ -21,6 +21,10 @@
 
   networking.hostName = "nixos-desktop";
 
+  environment.sessionVariables = rec {
+    HOSTNAME="nixos-desktop";
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   systemd.services.fan2go = {

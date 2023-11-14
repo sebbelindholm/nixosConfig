@@ -11,12 +11,12 @@ let
 
 in
 {
-  desktop = lib.nixosSystem {
+  nixos-desktop = lib.nixosSystem {
     inherit system;
     specialArgs = {
       inherit inputs user location hyprland;
       host = {
-        hostName = "desktop";
+        hostName = "nixos-desktop";
       };
     };
     modules = [
@@ -28,7 +28,7 @@ in
         home-manager.extraSpecialArgs = {
           inherit user inputs;
           host = {
-            hostName = "desktop";
+            hostName = "nixos-desktop";
           };
         };
         home-manager.users.${user} = {
@@ -41,12 +41,12 @@ in
     ];
   };
 
-  thinkpad = lib.nixosSystem {
+  nixos-thinkpad = lib.nixosSystem {
     inherit system;
     specialArgs = {
       inherit inputs user location hyprland;
       host = {
-        hostName = "thinkpad";
+        hostName = "nixos-thinkpad";
       };
     };
     modules = [
@@ -60,7 +60,7 @@ in
         home-manager.extraSpecialArgs = {
           inherit user;
           host = {
-            hostName = "thinkpad";
+            hostName = "nixos-thinkpad";
           };
         };
         home-manager.users.${user} = {

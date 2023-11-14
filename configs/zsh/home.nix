@@ -11,8 +11,7 @@
 
             shellAliases = {
                 ls="eza --icons --grid --classify --colour=auto --sort=type --group-directories-first --header --modified --created --git --binary --group";
-                build-thinkpad="sudo nixos-rebuild switch --flake ~/.setup#thinkpad";
-                build-desktop="sudo nixos-rebuild switch --flake ~/.setup#desktop";
+                build-system="sudo nixos-rebuild switch --flake ~/.setup#$HOSTNAME";
                 cleanup="nix-collect-garbage -d && sudo nix-collect-garbage -d";
                 save-gnome="/home/sebastian/.setup/Scripts/saveDconf.sh";
             };
