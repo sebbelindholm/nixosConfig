@@ -15,5 +15,6 @@
         ./obs/home.nix
         ./hypr/home.nix
         ./micro/home.nix
+        ./btop/home.nix
     ];
 }
