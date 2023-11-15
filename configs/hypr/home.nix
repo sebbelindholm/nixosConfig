@@ -19,7 +19,8 @@
     cliphist
     wl-clip-persist
     udiskie
-	swww
+    libcanberra
+	  swww
     hyprpicker
   ];
 
