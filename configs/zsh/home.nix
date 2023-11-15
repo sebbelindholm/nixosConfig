@@ -11,10 +11,10 @@
 
             shellAliases = {
                 ls="eza --icons --grid --classify --colour=auto --sort=type --group-directories-first --header --modified --created --git --binary --group";
-                build-system="sudo nixos-rebuild switch --flake ~/.setup#$HOSTNAME";
+                build-system="sudo nixos-rebuild switch --flake ~/.setup";
                 cleanup="nix-collect-garbage -d && sudo nix-collect-garbage -d";
                 save-gnome="/home/sebastian/.setup/Scripts/saveDconf.sh";
-                ssh-desktop="ssh sebastian@slindholm.com -p";
+                ssh-desktop="ssh sebastian@slindholm.com";
             };
             
             oh-my-zsh =  {
