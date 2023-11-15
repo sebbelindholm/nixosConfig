@@ -19,7 +19,7 @@
     cliphist
     wl-clip-persist
     udiskie
-    libcanberra
+    libcanberra-gtk3
 	  swww
     hyprpicker
   ];
