@@ -18,11 +18,12 @@
     pamixer
     cliphist
     wl-clip-persist
-    udiskie
     libcanberra-gtk3
 	  swww
     hyprpicker
   ];
+
+  services.udiskie.enable = true;
 
   imports = [
     #../wofi/home.nix

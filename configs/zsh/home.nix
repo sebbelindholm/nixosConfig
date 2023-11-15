@@ -14,6 +14,7 @@
                 build-system="sudo nixos-rebuild switch --flake ~/.setup#$HOSTNAME";
                 cleanup="nix-collect-garbage -d && sudo nix-collect-garbage -d";
                 save-gnome="/home/sebastian/.setup/Scripts/saveDconf.sh";
+                ssh-desktop="ssh sebastian@slindholm.com -p";
             };
             
             oh-my-zsh =  {
