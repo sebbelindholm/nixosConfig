@@ -43,6 +43,26 @@
     wantedBy = [ "multi-user.target" ];
   };
 
+  hardware = {
+    opengl = {
+
+        extraPackages = with pkgs; [
+          rocm-opencl-icd 
+          rocm-opencl-runtime
+          amdvlk
+          driversi686Linux.amdvlk
+          mesa.drivers
+        ];
+
+        extraPackages32 = with pkgs; [
+          driversi686Linux.amdvlk
+        ];
+    };
+
+  };
+
+  environment.variables.AMD_VULKAN_ICD = "RADV";
+
 
   system.stateVersion = "22.05";
 }

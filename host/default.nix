@@ -44,7 +44,7 @@ in
   nixos-thinkpad = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs user location hyprland;
+      inherit inputs user location hyprland lib;
       host = {
         hostName = "nixos-thinkpad";
       };
@@ -53,6 +53,8 @@ in
       ./thinkpad
 
       nixos-hardware.nixosModules.lenovo-thinkpad-l13
+      nixos-hardware.nixosModules.common-gpu-intel 
+      nixos-hardware.nixosModules.common-cpu-intel 
 
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
