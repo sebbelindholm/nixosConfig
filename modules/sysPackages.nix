@@ -4,6 +4,10 @@
 	#nixpkgs.config.allowUnfree = true;
 	
     environment.systemPackages = with pkgs; [
+        clinfo
+        vulkan-tools
+        glxinfo
+        libva-utils
 	    dconf2nix
         fan2go
 		sassc

@@ -9,7 +9,6 @@
     ];
 
   boot = {
-    #kernelParams = [ "intel_iommu=on" "iommu=pt" ];
     initrd.kernelModules = [ "amdgpu" ];
   };
 
@@ -45,13 +44,11 @@
 
   hardware = {
     opengl = {
-
         extraPackages = with pkgs; [
           rocm-opencl-icd 
           rocm-opencl-runtime
           amdvlk
-          driversi686Linux.amdvlk
-          mesa.drivers
+          rocmPackages.clr.icd
         ];
 
         extraPackages32 = with pkgs; [
@@ -62,7 +59,6 @@
   };
 
   environment.variables.AMD_VULKAN_ICD = "RADV";
-
 
   system.stateVersion = "22.05";
 }

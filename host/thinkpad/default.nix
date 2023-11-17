@@ -12,13 +12,17 @@
 
   environment.sessionVariables = rec {
     HOSTNAME="nixos-thinkpad";
-   # LIBVA_DRIVER_NAME="i965";
-
+   LIBVA_DRIVER_NAME="i965";
   };
 
   programs.light.enable = true;
 
   boot.initrd.kernelModules = [ "i915" ];
+  services = {
+    xserver = {
+      videoDrivers = [ "i915" ];
+    };
+  };
 
   hardware.opengl = {
     enable = true;
