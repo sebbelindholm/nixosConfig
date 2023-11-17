@@ -18,7 +18,6 @@
 
   programs.light.enable = true;
 
- /**
   boot.initrd.kernelModules = [ "i915" ];
 
   hardware.opengl = {
@@ -31,7 +30,6 @@
   };
 
   hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ vaapiIntel ];
-**/
 
   system.stateVersion = "22.05";
 }
