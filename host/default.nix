@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, user, location, nixos-hardware, hyprland, ... }:
+{ lib, inputs, nixpkgs, home-manager, vars, nixos-hardware, hyprland, ... }:
 
 let
   system = "x86_64-linux" ;                               
@@ -14,7 +14,7 @@ in
   nixos-desktop = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs user location hyprland;
+      inherit inputs vars hyprland;
       host = {
         hostName = "nixos-desktop";
       };
@@ -31,7 +31,7 @@ in
             hostName = "nixos-desktop";
           };
         };
-        home-manager.users.${user} = {
+        home-manager.users.${vars.user} = {
           home.stateVersion = "22.05";
           imports = [ 
             (import ./desktop/home.nix) 
@@ -44,7 +44,7 @@ in
   nixos-thinkpad = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs user location hyprland lib;
+      inherit inputs vars hyprland lib;
       host = {
         hostName = "nixos-thinkpad";
       };
@@ -65,7 +65,7 @@ in
             hostName = "nixos-thinkpad";
           };
         };
-        home-manager.users.${user} = {
+        home-manager.users.${vars.user} = {
           home.stateVersion = "22.05";
           imports = [ 
             (import ./thinkpad/home.nix) 

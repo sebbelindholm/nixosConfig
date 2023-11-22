@@ -37,14 +37,14 @@
     nixosConfigurations = (
      import ./host {
         inherit (nixpkgs) lib;
-        inherit inputs nixpkgs user location home-manager nixos-hardware hyprland vars;
+        inherit inputs nixpkgs home-manager nixos-hardware hyprland vars;
       }
     );
 
     darwinConfigurations = (
         Import ./host/darwin {
 	        inherit (nixpkgs) lib;
-	        inherit inputs nixpkgs user location home-manager darwin vars;
+	        inherit inputs nixpkgs home-manager darwin vars;
 	    }
     );
   };
