@@ -1,7 +1,7 @@
 { config, pkgs, inputs, darwin, ... }:
 
 {
-    enviroment = {
+    envirnoment = {
         systemPackages = with pkgs; [
             git
         ];
