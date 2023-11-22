@@ -6,13 +6,4 @@
             git
         ];
     };
-
-    home = {
-        packages = with pkgs; [
-            discord
-            kitty
-            vscode
-            neofetch
-        ];
-    };
 }

@@ -1,7 +1,11 @@
 { lib, inputs, nixpkgs, darwin, home-manager, vars, ...}:
 
 let
-  system = "aarch64-darwin";                           
+  system = "aarch64-darwin";   
+  pkgs = import nixpkgs {
+    inherit system;
+    config.allowUnfree = true;
+  };                        
 in
 {
   macbookM1 = darwin.lib.darwinSystem {                
