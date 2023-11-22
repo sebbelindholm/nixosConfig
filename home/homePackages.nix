@@ -13,7 +13,6 @@
             discord
             spotify
             prismlauncher
-            lm_sensors
             comma
             gnome.gnome-tweaks
             webcord

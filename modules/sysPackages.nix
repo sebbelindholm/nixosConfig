@@ -14,6 +14,7 @@
         micro
         wget
         unzip
+        lm_sensors
         zip
         vim
         htop

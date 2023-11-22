@@ -19,6 +19,7 @@
 
             ignores = [
                 "*~"
+                ".DS_Store"
             ];
         };
     };
