@@ -3,7 +3,7 @@
 {
 
   nixpkgs.config.allowUnfree = true;
-  
+
   users.users.${vars.user} = {            
     home = "/Users/${vars.user}";
     shell = pkgs.zsh;                    
@@ -34,6 +34,7 @@
   };
 
   nix = {
+    useDaemon = true;
     package = pkgs.nix;
     gc = {                               
       automatic = true;
