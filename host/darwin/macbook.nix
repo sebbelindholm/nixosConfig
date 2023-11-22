@@ -1,6 +1,9 @@
 { config, pkgs, inputs, darwin, vars, ... }:
 
 {
+
+  nixpkgs.config.allowUnfree = true;
+  
   users.users.${vars.user} = {            
     home = "/Users/${vars.user}";
     shell = pkgs.zsh;                    
