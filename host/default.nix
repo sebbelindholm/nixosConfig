@@ -26,7 +26,7 @@ in
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit user inputs;
+          inherit vars inputs;
           host = {
             hostName = "nixos-desktop";
           };
@@ -60,7 +60,7 @@ in
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit user;
+          inherit vars;
           host = {
             hostName = "nixos-thinkpad";
           };
