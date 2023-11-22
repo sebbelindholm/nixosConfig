@@ -42,7 +42,7 @@
     );
 
     darwinConfigurations = (
-        Import ./host/darwin {
+        import ./host/darwin {
 	        inherit (nixpkgs) lib;
 	        inherit inputs nixpkgs home-manager darwin vars;
 	    }
