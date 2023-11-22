@@ -5,11 +5,6 @@
     
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    darwin = {
-	    url = "github:lnl7/nix-darwin"; 
-	    inputs.nixpkgs.follows = "nixpkgs";
-    };  
-
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     hyprland = {
@@ -26,7 +21,7 @@
     
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, hyprland, darwin, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, hyprland, ... }@inputs: 
   let
     vars = {
       user = "sebastian";
@@ -39,13 +34,6 @@
         inherit (nixpkgs) lib;
         inherit inputs nixpkgs home-manager nixos-hardware hyprland vars;
       }
-    );
-
-    darwinConfigurations = (
-        import ./host/darwin {
-	        inherit (nixpkgs) lib;
-	        inherit inputs nixpkgs home-manager darwin vars;
-	    }
     );
   };
 }
