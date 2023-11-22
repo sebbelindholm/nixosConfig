@@ -15,6 +15,18 @@ in
       home-manager.darwinModules.home-manager {           
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = {
+          inherit vars inputs;
+          host = {
+            hostName = "macbookM1";
+          };
+        }; 
+        home-manager.users.${vars.user} = {
+          home.stateVersion = "22.05";
+          imports = [ 
+            (import ./home.nix) 
+          ];
+        };       
       }
     ];
   };

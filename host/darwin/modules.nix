@@ -2,7 +2,6 @@
 
 {
     imports = [
-        ../../configs/zsh/home.nix
-        ../../configs/git/home.nix
+
     ];
 }
