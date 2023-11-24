@@ -6,7 +6,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-dock
-    gnomeExtensions.system-action-hibernate
+    #gnomeExtensions.system-action-hibernate
     gnomeExtensions.impatience
     gnomeExtensions.user-themes
     gnomeExtensions.dash-to-panel
