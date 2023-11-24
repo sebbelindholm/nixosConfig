@@ -8,11 +8,8 @@
         ./kitty/home.nix
         ./gtk/home.nix
         ./dconf/home.nix
-        #./emacs/home.nix
         ./neovim/home.nix
-        ./gnome/home.nix
         ./dconf/home.nix
-        ./obs/home.nix
         ./hypr/home.nix
         ./micro/home.nix
         ./btop/home.nix
