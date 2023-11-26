@@ -24,12 +24,6 @@
         man-pages-posix
         man
         neofetch
-        cmake
-        gnumake
-        clang
-        glibc
-        valgrind
-        gcc
         killall
         libnotify
         gnome.gnome-keyring
