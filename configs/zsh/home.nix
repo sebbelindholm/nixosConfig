@@ -15,6 +15,8 @@
                 cleanup="nix-collect-garbage -d && sudo nix-collect-garbage -d";
                 save-gnome="/home/sebastian/.setup/Scripts/saveDconf.sh";
                 ssh-desktop="ssh sebastian@slindholm.com";
+                c-shell="nix-shell /home/sebastian/.setup/shells/c/shell.nix";
+                rust-shell="nix-shell /home/sebastian/.setup/shells/rust/shell.nix";
             };
             
             oh-my-zsh =  {
