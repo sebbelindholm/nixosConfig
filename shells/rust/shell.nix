@@ -5,6 +5,7 @@
 
  pkgs.mkShell {
    packages = with pkgs; [
+      rustfmt
       rustc
       cargo
       glibc
