@@ -60,7 +60,7 @@ with lib.hm.gvariant;
       font-antialiasing = "rgba";
       font-hinting = "full";
       gtk-theme = "Gruvbox-Dark-BL";
-      icon-theme = "Papirus";
+      icon-theme = "gruvbox-plus";
       monospace-font-name = "JetBrainsMono Nerd Font Medium 12";
       text-scaling-factor = 1.0;
     };

@@ -1,22 +1,24 @@
 { pkgs, ... }:
 
 {
+    #home.file.".config/gtk-4.0/gtk.css".source = ./gtk.css;
+    #home.file.".config/gtk-3.0/gtk.css".source = ./gtk.css;
+
     gtk = {
         enable = true;
+
+        #theme.package = pkgs.adw-gtk3;
+        #theme.name = "adw-gtk3";
         
         #font.name = "Roboto 12";
         theme = {
         	name = "Gruvbox-Dark-BL";
             package = pkgs.gruvbox-gtk-theme;
-#        	package = pkgs.graphite-gtk-theme;
-            #name = "Arc-Dark";
-            #package = pkgs.arc-theme;
-            #name = "Orchis-Dark";            
-            #package = pkgs.orchis-theme ;
         };
         iconTheme = {
-            package = pkgs.papirus-icon-theme;
-            name = "Papirus";
+            #package = "${import ../icons/gruvbox-plus.nix { inherit pkgs; }}";
+            package = pkgs.zafiro-icons;
+            name = "Zafiro-icons-Dark";
         };
         cursorTheme = {
             package = pkgs.bibata-cursors;
