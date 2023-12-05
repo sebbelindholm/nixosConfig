@@ -6,10 +6,11 @@
         
         #font.name = "Roboto 12";
         theme = {
-        	name = "Arc-Dark";
+        	name = "Gruvbox-Dark-BL";
+            package = pkgs.gruvbox-gtk-theme;
 #        	package = pkgs.graphite-gtk-theme;
             #name = "Arc-Dark";
-            package = pkgs.arc-theme;
+            #package = pkgs.arc-theme;
             #name = "Orchis-Dark";            
             #package = pkgs.orchis-theme ;
         };

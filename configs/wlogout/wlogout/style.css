@@ -1,8 +1,8 @@
 window {
     font-family: CaskaydiaCove Nerd Font, monospace;
     font-size: 12pt;
-    color: #cdd6f4; 
-    background-color: rgba(40, 44, 52, 0.5);
+    color: #ebdbb2; 
+    background-color: rgba(29, 32, 33, 0.5);
 }
 
 button {
@@ -12,18 +12,18 @@ button {
     border: none;
     /*color: #ced7f4;*/
     text-shadow: none;
-    background-color: rgba(40, 44, 52, 0);
+    background-color: rgba(29, 32, 33, 0);
     margin: 5px;
     transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: rgba(49, 50, 68, 0.1);
+    background-color: rgba(40, 40, 40, 0.1);
 }
 
 button:focus {
-    background-color: #61AFEF;
-    color: #21252B;
+    background-color: #458588;
+    color: #282828;
     text-shadow: none;
 }
 

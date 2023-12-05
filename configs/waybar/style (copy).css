@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: #282828;
+    background: #282C34;
 }
 
 tooltip {
@@ -29,7 +29,7 @@ tooltip label {
  {
     margin: 4px 0px 4px 0px;
     padding: 0px 15px 0px 15px;
-    background-color: #1d2021;
+    background-color: #21252B;
     border-radius: 20px;
    /* box-shadow: 1px 1px 5px #555 inset;*/
 }
@@ -40,7 +40,7 @@ tooltip label {
 
 #workspaces button {
     background: transparent;
-    color: #ebdbb2;
+    color: #F6F7F9;
 }
 
 #battery.charging {
@@ -49,24 +49,24 @@ tooltip label {
 }
 
 #clock {
-    color: #d79921;
+    color: #ECD3A0;
     margin-right: 15px;
 }
 
 #battery {
-    color: #458588;
+    color: #61AFEF;
 }
 
 #backlight {
-    color: #d65d0e;
+    color: #E5C07B;
 }
 
 #bluetooth {
-    color: #b16286;
+    color: #C678DD;
 }
 
 #network {
-    color: #cc241d;
+    color: #E06C75;
 }
 
 #window {
@@ -74,7 +74,7 @@ tooltip label {
 }
 
 #pulseaudio {
-    color: #98971a;
+    color: #98C379;
 }
 
 @keyframes blink {
