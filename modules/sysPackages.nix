@@ -49,6 +49,7 @@
         (python310.withPackages (p: with p; [
             pygobject3 
             requests
+            python-pam
         ]))
 
         gradience

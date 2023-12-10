@@ -17,7 +17,21 @@
       cascadia-code
       nerdfonts
       font-awesome
-      #(nerdfonts.override { fonts = [ "jetbrains-mono" "Iosevka" ]; })
+      papirus-icon-theme
+      qogir-icon-theme
+      whitesur-icon-theme
+      colloid-icon-theme
+      adw-gtk3
+      nerdfonts
+
+      (nerdfonts.override { fonts = [
+        	      	"Ubuntu"
+        	      	"UbuntuMono"
+        	      	"CascadiaCode"
+        	      	"FantasqueSansMono"
+        	      	"FiraCode"
+        	      	"Mononoki"
+       ]; })
     ];
   };    
 }

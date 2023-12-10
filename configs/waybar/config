@@ -2,7 +2,7 @@
 
     "layer": "top",
     "position": "top",
-    "output": ["DP-1", "eDP-1"],
+    "output": ["DP-1", "eDP-1", "HDMI-A-1"],
     "height": 30,
     "spacing": 10,
     
@@ -14,7 +14,8 @@
     "hyprland/window": {
         "min-length": 50,
         "max-length": 50,
-        "all-outputs": true
+        "all-outputs": true,
+        "default": "Desktop "
     },
 
     "hyprland/workspaces": {

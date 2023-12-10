@@ -21,19 +21,23 @@
     libcanberra-gtk3
 	  swww
     hyprpicker
+    supergfxctl
+    wf-recorder
+    wayshot
+    imagemagick
+    wl-gammactl
   ];
 
   services.udiskie.enable = true;
 
   imports = [
-    #../wofi/home.nix
     ../dunst/home.nix
     ../waybar/home.nix
     ../wlogout/home.nix
     ../swaylock/home.nix
     ../rofi/home.nix
     ../dunst/home.nix
-    #../ags/home.nix
+    ../ags/home.nix
   ];
 
   #home.sessionVariables = {

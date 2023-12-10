@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, vars, nixos-hardware, hyprland, ... }:
+{ lib, inputs, nixpkgs, home-manager, vars, nixos-hardware, hyprland, ags, ... }:
 
 let
   system = "x86_64-linux" ;                               
@@ -35,6 +35,7 @@ in
           home.stateVersion = "22.05";
           imports = [ 
             (import ./desktop/home.nix) 
+            ags.homeManagerModules.default
           ];
         };
       }

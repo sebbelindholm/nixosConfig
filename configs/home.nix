@@ -13,5 +13,7 @@
         ./hypr/home.nix
         ./micro/home.nix
         ./btop/home.nix
+        ./starship/home.nix
+        ./neofetch/home.nix
     ];
 }

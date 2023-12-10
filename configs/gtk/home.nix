@@ -1,34 +1,89 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
+let
+  moreWaita = pkgs.stdenv.mkDerivation {
+    name = "MoreWaita";
+    src = inputs.more-waita;
+    installPhase = ''
+        mkdir -p $out/share/icons
+        mv * $out/share/icons
+    '';
+  };
 
+  nerdfonts = (pkgs.nerdfonts.override { fonts = [
+    "Ubuntu"
+    "UbuntuMono"
+    "CascadiaCode"
+    "FantasqueSansMono"
+    "FiraCode"
+    "Mononoki"
+  ]; });
+
+  cursor-theme = "Qogir";
+  cursor-package = pkgs.qogir-icon-theme;
+in
 {
-    #home.file.".config/gtk-4.0/gtk.css".source = ./gtk.css;
-    #home.file.".config/gtk-3.0/gtk.css".source = ./gtk.css;
+  home = {
+    packages = with pkgs; [
+      font-awesome
+      papirus-icon-theme
+      qogir-icon-theme
+      whitesur-icon-theme
+      colloid-icon-theme
+      adw-gtk3
+      nerdfonts
+      moreWaita
+    ];
+    sessionVariables.XCURSOR_THEME = cursor-theme;
+    pointerCursor = {
+      package = cursor-package;
+      name = cursor-theme;
+      size = 24;
+      gtk.enable = true;
+    };
+    file = {
+      ".local/share/fonts" = {
+        recursive = true;
+        source = "${nerdfonts}/share/fonts/truetype/NerdFonts";
+      };
+      ".fonts" = {
+        recursive = true;
+        source = "${nerdfonts}/share/fonts/truetype/NerdFonts";
+      };
+      ".config/gtk-4.0/gtk.css" = {
+        text = ''
+          window.messagedialog .response-area > button,
+          window.dialog.message .dialog-action-area > button,
+          .background.csd{
+            border-radius: 0;
+          }
+        '';
+      };
+      ".local/share/icons/MoreWaita" = {
+        source = "${moreWaita}/share/icons";
+      };
+    };
+  };
 
-    gtk = {
-        enable = true;
+  gtk = {
+    enable = true;
+    font.name = "Ubuntu Nerd Font";
+    theme.name = "adw-gtk3-dark";
+    cursorTheme = {
+      name = cursor-theme;
+      package = cursor-package;
+    };
+    iconTheme.name = "MoreWaita";
+    gtk3.extraCss = ''
+      headerbar, .titlebar,
+      .csd:not(.popup):not(tooltip):not(messagedialog) decoration{
+        border-radius: 0;
+      }
+    '';
+  };
 
-        #theme.package = pkgs.adw-gtk3;
-        #theme.name = "adw-gtk3";
-        
-        #font.name = "Roboto 12";
-        theme = {
-        	name = "Gruvbox-Dark-BL";
-            package = pkgs.gruvbox-gtk-theme;
-        };
-        iconTheme = {
-            #package = "${import ../icons/gruvbox-plus.nix { inherit pkgs; }}";
-            package = pkgs.zafiro-icons;
-            name = "Zafiro-icons-Dark";
-        };
-        cursorTheme = {
-            package = pkgs.bibata-cursors;
-            name = "Bibata-Modern-Ice";
-        };
-        
-    };   
-
-    home.pointerCursor = {
-        package = pkgs.bibata-cursors;
-        name = "Bibata-Modern-Ice";
-    }; 
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+    style.name = "adwaita-dark";
+  };
 }
