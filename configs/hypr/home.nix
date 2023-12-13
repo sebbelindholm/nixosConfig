@@ -26,6 +26,7 @@
     wayshot
     imagemagick
     wl-gammactl
+    upower
   ];
 
   services.udiskie.enable = true;

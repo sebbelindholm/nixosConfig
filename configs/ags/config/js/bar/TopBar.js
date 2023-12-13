@@ -90,7 +90,7 @@ const End = () => Widget.Box({
         SeparatorDot(Recorder, r => r.recording),
         SystemIndicators(),
         SeparatorDot(Battery, b => b.available),
-        BatteryBar(),
+        BatteryBar(Battery, b => b.available),
         SeparatorDot(),
         PowerMenu(),
     ],

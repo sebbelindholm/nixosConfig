@@ -4,6 +4,7 @@
 	#nixpkgs.config.allowUnfree = true;
 	
     environment.systemPackages = with pkgs; [
+		nodejs
         clinfo
         vulkan-tools
         glxinfo

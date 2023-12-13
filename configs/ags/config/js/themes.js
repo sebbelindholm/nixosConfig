@@ -9,6 +9,8 @@ export default [
         name: 'Kitty Dark',
         icon: '󰄛',
         'desktop.wallpaper.img': WP + 'kittybl.jpeg',
+        'desktop.avatar': '/home/sebastian/.setup/background/23123397.jpg',
+        'bar.separators': false,
     }),
     Theme({
         name: 'Kitty Light',
@@ -17,6 +19,7 @@ export default [
         ...lightColors,
         'theme.widget.bg': '$accent',
         'theme.widget.opacity': 64,
+        'desktop.avatar': '/home/sebastian/.setup/background/23123397.jpg',
     }),
     Theme({
         name: 'Leaves',
@@ -29,6 +32,7 @@ export default [
         'theme.bg': 'transparentize(#171717, 0.3)',
         'bar.style': 'floating',
         'radii': 0,
+        'desktop.avatar': '/home/sebastian/.setup/background/23123397.jpg',
     }),
     Theme({
         name: 'Ivory',
@@ -46,6 +50,7 @@ export default [
         'theme.accent.gradient': 'to right, $accent, darken($accent, 6%)',
         'hypr.inactive_border': 'rgba(111111FF)',
         'bar.separators': false,
+        'desktop.avatar': '/home/sebastian/.setup/background/23123397.jpg',
     }),
     Theme({
         name: 'Space',
@@ -62,5 +67,83 @@ export default [
         'theme.bg': 'transparentize(#171717, 0.3)',
         'theme.widget.opacity': 95,
         'bar.flat_buttons': false,
+        'desktop.avatar': '/home/sebastian/.setup/background/23123397.jpg',
+    }),
+    Theme({
+        name: 'Mine',
+        icon: '󰩃',
+        'spacing': 10,
+        'padding': 10,
+        'radii': 9,
+        'popover_padding_multiplier': 1.4,
+        'color.red': '#e55f86',
+        'color.green': '#00D787',
+        'color.yellow': '#EBFF71',
+        'color.blue': '#51a4e7',
+        'color.magenta': '#9077e7',
+        'color.teal': '#51e6e6',
+        'color.orange': '#E79E64',
+        'theme.scheme': 'dark',
+        'theme.bg': '#171717',
+        'theme.fg': '#eeeeee',
+        'theme.accent.accent': '$blue',
+        'theme.accent.fg': '#141414',
+        'theme.accent.gradient': 'to right, $accent, lighten($accent, 6%)',
+        'theme.widget.bg': '$fg-color',
+        'theme.widget.opacity': 94,
+        'border.color': '$fg-color',
+        'border.opacity': 97,
+        'border.width': 1,
+        'hypr.inactive_border': 'rgba(333333ff)',
+        'hypr.wm_gaps_multiplier': 1,
+        'font.font': 'Ubuntu Nerd Font',
+        'font.mono': 'Mononoki Nerd Font',
+        'font.size': 13,
+        'applauncher.width': 500,
+        'applauncher.height': 500,
+        'applauncher.icon_size': 52,
+        'bar.position': 'top',
+        'bar.style': 'floating',
+        'bar.flat_buttons': true,
+        'bar.separators': false,
+        'bar.icon': 'distro-icon',
+        'battery.bar.width': 70,
+        'battery.bar.height': 14,
+        'battery.low': 30,
+        'battery.medium': 50,
+        'desktop.wallpaper.fg': '#fff',
+        'desktop.wallpaper.img': '/home/sebastian/.setup/background/b-184.jpg',
+        'desktop.avatar': '/home/sebastian/.setup/background/23123397.jpg',
+        'desktop.screen_corners': false,
+        'desktop.clock.enable': true,
+        'desktop.clock.position': 'center center',
+        'desktop.drop_shadow': true,
+        'desktop.shadow': 'rgba(0, 0, 0, .6)',
+        'desktop.dock.icon_size': 56,
+        'desktop.dock.pinned_apps': [
+            'firefox',
+            'kitty',
+            'vscode',
+            'org.gnome.Nautilus',
+            'discord',
+            'webcord',
+            'spotify'
+        ],
+        'notifications.black_list': [
+            'Spotify'
+        ],
+        'notifications.position': [
+          'top'
+        ],
+        'notifications.width': 450,
+        'dashboard.sys_info_size': 70,
+        'mpris.black_list': [
+          'Caprine'
+        ],
+        'mpris.preferred': 'spotify',
+        'workspaces': 10
     }),
 ];
+
+
+
