@@ -22,8 +22,6 @@
     package = hyprland.packages.${pkgs.system}.hyprland;
   };
 
-  services.udisks2.enable = true;
-
   xdg.portal = {
     enable = true;
     wlr.enable = true;

@@ -5,6 +5,7 @@
 	
     environment.systemPackages = with pkgs; [
 		nodejs
+        udiskie
 		xwaylandvideobridge
         clinfo
         vulkan-tools
