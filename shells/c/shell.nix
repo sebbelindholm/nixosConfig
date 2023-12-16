@@ -5,12 +5,17 @@
 
  pkgs.mkShell {
    packages = with pkgs; [
+		git
         cmake
         gnumake
         clang
         glibc
         valgrind
         gcc
+        meson
+        ninja
+        cairo
+        pango
    ];
 
 
