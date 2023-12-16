@@ -115,7 +115,7 @@ export default [
         'desktop.wallpaper.img': '/home/sebastian/.setup/background/b-184.jpg',
         'desktop.avatar': '/home/sebastian/.setup/background/23123397.jpg',
         'desktop.screen_corners': false,
-        'desktop.clock.enable': true,
+        'desktop.clock.enable': false,
         'desktop.clock.position': 'center center',
         'desktop.drop_shadow': true,
         'desktop.shadow': 'rgba(0, 0, 0, .6)',
@@ -123,10 +123,9 @@ export default [
         'desktop.dock.pinned_apps': [
             'firefox',
             'kitty',
-            'vscode',
+            'code',
             'org.gnome.Nautilus',
             'discord',
-            'webcord',
             'spotify'
         ],
         'notifications.black_list': [

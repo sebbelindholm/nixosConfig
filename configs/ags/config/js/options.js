@@ -217,12 +217,12 @@ export default {
             pinned_apps: Option([
                 'firefox',
                 'kitty',
-                'vscode',
+                'code',
                 'org.gnome.Nautilus',
                 'discord',
-                'webcord',
                 'spotify',
-            ], { 'scss': 'exclude' }),
+            ], { 'scss': 'exclude' },
+            ),
         },
     },
 
