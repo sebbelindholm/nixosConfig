@@ -16,6 +16,7 @@
                 save-gnome="/home/sebastian/.setup/Scripts/saveDconf.sh";
                 ssh-desktop="ssh sebastian@slindholm.com";
                 c-shell="nix-shell /home/sebastian/.setup/shells/c/shell.nix";
+				image="kitten icat";
                 rust-shell="nix-shell /home/sebastian/.setup/shells/rust/shell.nix";
             };
             
