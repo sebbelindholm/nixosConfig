@@ -4,7 +4,33 @@
 	#nixpkgs.config.allowUnfree = true;
 	
     environment.systemPackages = with pkgs; [
-		nodejs
+
+		pkg-config
+        scdoc
+        expat
+        libxml2
+        wayland-protocols
+        libxkbcommon
+        json_c
+        pcre2
+        libevdev
+
+
+		git
+        cmake
+        gnumake
+        clang
+        glibc
+        valgrind
+        gcc
+        meson
+        ninja
+        cairo
+        pango
+
+		networkmanagerapplet
+        blueman
+        nodejs
         udiskie
 		xwaylandvideobridge
         clinfo

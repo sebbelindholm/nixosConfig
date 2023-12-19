@@ -15,5 +15,6 @@
         ./btop/home.nix
         ./starship/home.nix
         ./neofetch/home.nix
+        ./code/home.nix
     ];
 }

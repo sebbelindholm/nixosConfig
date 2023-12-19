@@ -4,6 +4,7 @@
     home = {
         packages = with pkgs; [
 	        neofetch
+            unityhub
 			vlc
             firefox
 			element-desktop

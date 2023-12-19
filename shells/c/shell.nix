@@ -16,6 +16,17 @@
         ninja
         cairo
         pango
+
+		pkg-config
+        scdoc
+        expat
+        libxml2
+        wayland-protocols
+        libxkbcommon
+        json_c
+        pcre2
+        libevdev
+        
    ];
 
 
