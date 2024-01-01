@@ -20,6 +20,8 @@
     "editor.guides.bracketPairsHorizontal": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.indentation": false,
+    "editor.insertSpaces": false,
+    //"editor.tabSize": 4,
     "editor.cursorBlinking": "phase", 
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.renderLineHighlight": "none",

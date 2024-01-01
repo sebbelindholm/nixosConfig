@@ -1,20 +1,8 @@
 { config, pkgs, ... }:
 
 {
-	#nixpkgs.config.allowUnfree = true;
 	
     environment.systemPackages = with pkgs; [
-
-		pkg-config
-        scdoc
-        expat
-        libxml2
-        wayland-protocols
-        libxkbcommon
-        json_c
-        pcre2
-        libevdev
-
 
 		git
         cmake
